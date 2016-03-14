@@ -18,17 +18,11 @@ namespace DraperStudio\Eloquent\Hashid;
  */
 trait HashidModel
 {
-    /**
-     *
-     */
     public static function bootHashidTrait()
     {
         static::observe(new HashidObserver());
     }
 
-    /**
-     *
-     */
     public function generateHashidFromId()
     {
         $this->setHashidValue(Hashid::fromId($this->getKey(), $this->hashidLength()));
@@ -44,9 +38,6 @@ trait HashidModel
         $this->setHashidValue($hashid);
     }
 
-    /**
-     *
-     */
     public function generateHashidFromRandom()
     {
         $hashid = Hashid::fromRandom($this->hashidLength());
@@ -72,9 +63,6 @@ trait HashidModel
         return $fields;
     }
 
-    /**
-     *
-     */
     public function generateHashid()
     {
         $strategy = $this->hashidStrategy();
