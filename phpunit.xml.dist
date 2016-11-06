@@ -16,7 +16,7 @@
          verbose="true"
 >
     <testsuites>
-        <testsuite name="Eloquent Hashid Test Suite">
+        <testsuite name="Eloquent UUID Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>

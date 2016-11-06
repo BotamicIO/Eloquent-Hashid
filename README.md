@@ -1,17 +1,40 @@
-# Eloquent Hashid
+# Eloquent Hashids
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/eloquent-hashid
+$ composer require faustbrian/eloquent-hashids
 ```
 
 ## Usage
 
 ``` php
-To-Do...
+<?php
+
+namespace App;
+
+use BrianFaust\Hashids\HasHashid;
+use Illuminate\Database\Eloquent\Model;
+
+class Provider extends Model
+{
+    use HasHashid;
+
+    /**
+     * Get the options for generating the hashid.
+     */
+    public function getHashidOptions() : HashidOptions
+    {
+        return HashidOptions::create()
+            ->saveTo('hashid')
+            ->useStrategy('string')
+            ->withLength(16)
+            ->withString(str_andom(10));
+    }
+}
+
 ```
 
 ## Security

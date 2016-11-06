@@ -1,10 +1,7 @@
 <?php
 
-namespace BrianFaust\Tests\Eloquent\Hashid;
+namespace BrianFaust\Tests\Hashids;
 
-use GrahamCampbell\TestBench\AbstractPackageTestCase;
-
-abstract class AbstractTestCase extends AbstractPackageTestCase
+abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
 {
-    //
 }
