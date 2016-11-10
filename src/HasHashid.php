@@ -32,6 +32,7 @@ trait HasHashid
         static::created(function (Model $model) {
             if ($model->getHashidOptions()->strategy === 'id') {
                 $model->addHashid();
+                $model->save();
             }
         });
     }
