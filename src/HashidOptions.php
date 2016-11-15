@@ -5,10 +5,10 @@ namespace BrianFaust\Hashids;
 class HashidOptions
 {
     /** @var string */
-    public $hashidField = 'id';
+    public $hashidField = 'hashid';
 
     /** @var string */
-    public $strategy = 'random';
+    public $strategy = 'id';
 
     /** @var int */
     public $length = 8;
