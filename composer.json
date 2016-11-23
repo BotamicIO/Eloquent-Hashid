@@ -6,14 +6,13 @@
     "authors": [{
         "name": "Brian Faust",
         "email": "hello@brianfaust.de",
-        "homepage": "https://brianfaust.de",
-        "role": "Developer"
+        "homepage": "https://brianfaust.de"
     }],
     "require": {
-        "php": ">=7.0.0",
-        "illuminate/database": "5.2.* || 5.3.*",
-        "illuminate/support": "5.2.* || 5.3.*",
-        "hashids/hashids": "^1.0"
+        "php": "^7.0",
+        "illuminate/database": "5.3.*",
+        "illuminate/support": "5.3.*",
+        "hashids/hashids": "^2.0"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.2",
