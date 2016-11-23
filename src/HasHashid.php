@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Eloquent Hashids.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Hashids;
 
 use Illuminate\Database\Eloquent\Model;
@@ -133,11 +142,11 @@ trait HasHashid
      */
     protected function guardAgainstInvalidHashidOptions()
     {
-        if (!strlen($this->hashidOptions->hashidField)) {
+        if (! strlen($this->hashidOptions->hashidField)) {
             throw InvalidOption::missingHashidField();
         }
 
-        if ($this->hashidOptions->strategy === 'string' && !strlen($this->hashidOptions->string)) {
+        if ($this->hashidOptions->strategy === 'string' && ! strlen($this->hashidOptions->string)) {
             throw InvalidOption::missingString();
         }
     }
