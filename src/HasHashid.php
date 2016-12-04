@@ -51,7 +51,7 @@ trait HasHashid
     /**
      * Add the hashid to the model.
      */
-    protected function addHashid()
+    protected function addHashid(): void
     {
         $this->hashidOptions = $this->getHashidOptions();
 
@@ -92,17 +92,17 @@ trait HasHashid
         }
     }
 
-    protected function generateFromId($id, $length)
+    protected function generateFromId($id, $length): string
     {
         return $this->createHashid($id, $length);
     }
 
-    protected function generateFromString($string, $length)
+    protected function generateFromString($string, $length): string
     {
         return $this->createHashid($string, $length);
     }
 
-    protected function generateFromRandom($length)
+    protected function generateFromRandom($length): string
     {
         $numbers = [strlen(str_random($length)), rand(), $length];
 
@@ -142,7 +142,7 @@ trait HasHashid
     /**
      * This function will throw an exception when any of the options is missing or invalid.
      */
-    protected function guardAgainstInvalidHashidOptions()
+    protected function guardAgainstInvalidHashidOptions(): void
     {
         if (!strlen($this->hashidOptions->hashidField)) {
             throw InvalidOption::missingHashidField();
@@ -153,7 +153,7 @@ trait HasHashid
         }
     }
 
-    private function createHashid($string, $length)
+    private function createHashid($string, $length): string
     {
         if (is_array($string)) {
             $string = implode('', $string);
@@ -166,7 +166,7 @@ trait HasHashid
         return substr($hashid, 0, $length);
     }
 
-    private function uniqueRandomNumbersWithinRange($min, $max, $quantity)
+    private function uniqueRandomNumbersWithinRange($min, $max, $quantity): array
     {
         $numbers = range($min, $max);
         shuffle($numbers);

@@ -27,7 +27,7 @@ class HashidOptions
     /** @var string */
     public $string;
 
-    public static function create(): HashidOptions
+    public static function create(): self
     {
         return new static();
     }
@@ -37,7 +37,7 @@ class HashidOptions
      *
      * @return \BrianFaust\Hashids\HashidsOptions
      */
-    public function saveTo(string $fieldName): HashidOptions
+    public function saveTo(string $fieldName): self
     {
         $this->hashidField = $fieldName;
 
@@ -49,7 +49,7 @@ class HashidOptions
      *
      * @return \BrianFaust\Hashids\HashidsOptions
      */
-    public function useStrategy(string $strategy): HashidOptions
+    public function useStrategy(string $strategy): self
     {
         $this->strategy = $strategy;
 
@@ -61,7 +61,7 @@ class HashidOptions
      *
      * @return \BrianFaust\Hashids\HashidsOptions
      */
-    public function withLength(string $length): HashidOptions
+    public function withLength(string $length): self
     {
         $this->length = $length;
 
@@ -73,7 +73,7 @@ class HashidOptions
      *
      * @return \BrianFaust\Hashids\HashidsOptions
      */
-    public function withString(string $string): HashidOptions
+    public function withString(string $string): self
     {
         $this->string = $string;
 
