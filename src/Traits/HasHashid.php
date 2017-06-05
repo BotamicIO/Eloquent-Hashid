@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Eloquent Hashids.
  *
@@ -12,8 +9,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Hashids;
+namespace BrianFaust\Hashids\Traits;
 
+use BrianFaust\Hashids\HashidsOptions;
+use BrianFaust\Hashids\Exceptions\InvalidOption;
 use Hashids\Hashids;
 use Illuminate\Database\Eloquent\Model;
 
@@ -52,7 +51,7 @@ trait HasHashid
     /**
      * Add the hashid to the model.
      */
-    protected function addHashid(): void
+    protected function addHashid()
     {
         $this->hashidOptions = $this->getHashidOptions();
 
@@ -143,7 +142,7 @@ trait HasHashid
     /**
      * This function will throw an exception when any of the options is missing or invalid.
      */
-    protected function guardAgainstInvalidHashidOptions(): void
+    protected function guardAgainstInvalidHashidOptions()
     {
         if (!strlen($this->hashidOptions->hashidField)) {
             throw InvalidOption::missingHashidField();
