@@ -11,7 +11,6 @@
 
 namespace BrianFaust\Hashids\Traits;
 
-use BrianFaust\Hashids\HashidsOptions;
 use BrianFaust\Hashids\Exceptions\InvalidOption;
 use Hashids\Hashids;
 use Illuminate\Database\Eloquent\Model;
