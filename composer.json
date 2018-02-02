@@ -10,8 +10,8 @@
     }],
     "require": {
         "php": "^7.1",
-        "illuminate/database": "5.4.* || 5.5.*",
-        "illuminate/support": "5.4.* || 5.5.*",
+        "illuminate/database": "5.5.* || 5.6.*",
+        "illuminate/support": "5.5.* || 5.6.*",
         "hashids/hashids": "^2.0"
     },
     "require-dev": {
