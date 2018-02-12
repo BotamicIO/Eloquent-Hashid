@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Hashids\Traits;
 
+use BrianFaust\Hashids\Exceptions\InvalidOption;
 use Hashids\Hashids;
 use Illuminate\Database\Eloquent\Model;
-use BrianFaust\Hashids\Exceptions\InvalidOption;
 
 trait HasHashid
 {
@@ -145,11 +145,11 @@ trait HasHashid
      */
     protected function guardAgainstInvalidHashidOptions()
     {
-        if (! strlen($this->hashidOptions->hashidField)) {
+        if (!strlen($this->hashidOptions->hashidField)) {
             throw InvalidOption::missingHashidField();
         }
 
-        if ($this->hashidOptions->strategy === 'string' && ! strlen($this->hashidOptions->string)) {
+        if ($this->hashidOptions->strategy === 'string' && !strlen($this->hashidOptions->string)) {
             throw InvalidOption::missingString();
         }
     }
