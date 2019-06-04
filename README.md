@@ -1,16 +1,16 @@
 # Eloquent Hashids
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Eloquent-Hashids/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Eloquent-Hashids)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/eloquent-hashids.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Eloquent-Hashids.svg?style=flat-square)](https://github.com/faustbrian/Eloquent-Hashids/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Eloquent-Hashids.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Eloquent-Hashids)
+[![Build Status](https://img.shields.io/travis/artisanry/Eloquent-Hashids/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Eloquent-Hashids)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/eloquent-hashids.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Eloquent-Hashids.svg?style=flat-square)](https://github.com/artisanry/Eloquent-Hashids/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Eloquent-Hashids.svg?style=flat-square)](https://packagist.org/packages/artisanry/Eloquent-Hashids)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/eloquent-hashids
+$ composer require artisanry/eloquent-hashids
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ $ composer require faustbrian/eloquent-hashids
 
 namespace App;
 
-use BrianFaust\Hashids\HasHashid;
+use Artisanry\Hashids\HasHashid;
 use Illuminate\Database\Eloquent\Model;
 
 class Provider extends Model
@@ -50,7 +50,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -59,4 +59,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

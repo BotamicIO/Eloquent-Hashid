@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Eloquent Hashids.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Hashids;
+namespace Artisanry\Hashids;
 
 class HashidOptions
 {
@@ -35,7 +35,7 @@ class HashidOptions
     /**
      * @param string $fieldName
      *
-     * @return \BrianFaust\Hashids\HashidsOptions
+     * @return \Artisanry\Hashids\HashidsOptions
      */
     public function saveTo(string $fieldName): self
     {
@@ -47,7 +47,7 @@ class HashidOptions
     /**
      * @param string $strategy
      *
-     * @return \BrianFaust\Hashids\HashidsOptions
+     * @return \Artisanry\Hashids\HashidsOptions
      */
     public function useStrategy(string $strategy): self
     {
@@ -59,7 +59,7 @@ class HashidOptions
     /**
      * @param string $length
      *
-     * @return \BrianFaust\Hashids\HashidsOptions
+     * @return \Artisanry\Hashids\HashidsOptions
      */
     public function withLength(string $length): self
     {
@@ -71,7 +71,7 @@ class HashidOptions
     /**
      * @param string $string
      *
-     * @return \BrianFaust\Hashids\HashidsOptions
+     * @return \Artisanry\Hashids\HashidsOptions
      */
     public function withString(string $string): self
     {

@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/eloquent-hashids",
+    "name": "artisanry/eloquent-hashids",
     "description": "Generate Hashids when saving Eloquent models",
-    "keywords": ["laravel", "framework", "Laravel-Hashid", "Laravel Hashid", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-Hashid", "Laravel Hashid"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Hashids\\": "src/"
+            "Artisanry\\Hashids\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Hashids\\": "tests"
+            "Artisanry\\Tests\\Hashids\\": "tests"
         }
     },
     "config": {
